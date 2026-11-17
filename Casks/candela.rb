@@ -7,8 +7,8 @@
 #
 # Keep the two in sync when anything other than version/sha256 changes.
 cask "candela" do
-  version "0.1.2"
-  sha256 "7a4cc8f6cfa8bed7ccab45954b23553edd236a1dee038c57b083b2580016c967"
+  version "0.2.0"
+  sha256 "464b16d2df7b15ac13d1db065d57621fe29f3a643d2f12c3f9c1a15cb8d087f5"
 
   url "https://github.com/iamzifei/Candela/releases/download/v#{version}/Candela.dmg"
   name "Candela"
