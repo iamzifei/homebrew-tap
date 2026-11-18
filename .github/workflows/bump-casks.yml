@@ -1,0 +1,33 @@
+# Bumps each cask to its app's latest GitHub release (version + sha256).
+# Runs every 3 hours and on demand; commits only when something changed.
+name: Bump casks
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bump-casks
+  cancel-in-progress: false
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: bump
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/bump_casks.py
+      - name: Commit
+        if: steps.bump.outputs.message != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Casks
+          git commit -m "Bump: ${{ steps.bump.outputs.message }}"
+          git push
