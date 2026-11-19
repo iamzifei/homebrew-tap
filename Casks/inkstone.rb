@@ -3,8 +3,8 @@
 # Inkstone updates itself with Sparkle once installed (`auto_updates true`).
 # Bump `version` and `sha256` here when a release ships.
 cask "inkstone" do
-  version "0.5.0"
-  sha256 "dfdff74194a7eeb001168153723c884daaefe5e023ab254ac4595786652d2354"
+  version "0.5.1"
+  sha256 "da341a84612a798c67abc7eb913d7b20eaf1669ca117d2dab3010bb3c0901080"
 
   url "https://github.com/iamzifei/inkstone/releases/download/v#{version}/Inkstone-#{version}.dmg"
   name "Inkstone"
