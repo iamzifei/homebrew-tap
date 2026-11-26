@@ -3,8 +3,8 @@
 # Veil updates itself with Sparkle once installed (`auto_updates true`).
 # Bump `version` and `sha256` here when a release ships.
 cask "veil" do
-  version "1.1.0"
-  sha256 "c22120d04beaa8c57b63a121b04aa9f38985eea7c4a56d1b83f7fbd232cc67ce"
+  version "1.2.0"
+  sha256 "144977d9db563abddff4e8da6943235d169708250ff3e4a30c19270816f29846"
 
   url "https://github.com/iamzifei/veil/releases/download/v#{version}/Veil.dmg"
   name "Veil"
